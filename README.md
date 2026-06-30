@@ -22,10 +22,11 @@ Všetko sa edituje priamo v `index.html`:
 1. **Otváracie hodiny** — sekcia „Kontakt“. Aktuálne sú tam orientačné časy
    (Po–Pia 7:30–18:00 atď.). Nahraď ich reálnymi.
 2. **Menu a ceny** — sekcia „Menu“. Položky a ceny sú ukážkové, len ich prepíš.
-3. **Fotky produktov** — Galéria aj „O nás“ teraz používajú farebné dlaždice.
-   Nahraj do repozitára fotky výrobkov (a obrázok 4 termopohárov — čierna, biela,
-   krémová, rose gold) a daj vedieť — zaradím ich do galérie a pridám sekciu
-   s termopohármi. Návod na vloženie fotky je nižšie.
+3. **Fotky** — ✅ hotovo. Galéria používa 6 reálnych fotiek (`IMG_5910`–`IMG_5916`)
+   a sekcia „O nás“ zobrazuje záber kávy + termopoháre (`termopohare.png`).
+   Fotky sa načítavajú „lazy“ (až keď na ne posunieš), takže stránka je rýchla.
+   Tip: `termopohare.png` má ~3,4 MB — ak chceš ešte rýchlejšie načítanie,
+   zmenši ho na ~1400 px šírku (napr. cez squoosh.app) a nahraď súbor.
 4. **Rok založenia** — v hero sekcii je „od roku 2018“. Uprav podľa skutočnosti.
 
 ### Ako pridať vlastnú fotku
