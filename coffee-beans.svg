@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
   <!-- Subtle scattered coffee beans — used as a low-opacity luxury texture -->
-  <g fill="#7a4a2e" fill-opacity="0.55" stroke="none">
+  <g fill="#a9743f" fill-opacity="0.7" stroke="none">
     <!-- each bean = ellipse + seam curve -->
     <g transform="translate(40,34) rotate(28)">
       <ellipse rx="14" ry="9"/>
