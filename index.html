@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AMC tvoj coffeeshop — káva trochu inak | Spišská Nová Ves</title>
+  <meta name="description" content="AMC tvoj coffeeshop — prvý coffeeshop v Spišskej Novej Vsi. Kvalitná káva, domáce dobroty a priateľská atmosféra. Ing. Straku 9003, Spišská Nová Ves." />
+  <meta name="theme-color" content="#3a2419" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="AMC tvoj coffeeshop — káva trochu inak" />
+  <meta property="og:description" content="Prvý coffeeshop v Spišskej Novej Vsi. Kvalitná káva, domáce dobroty a priateľská atmosféra." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="sk_SK" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Favicon: little coffee cup -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%98%95%3C/text%3E%3C/svg%3E" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a href="#top" class="brand" aria-label="AMC tvoj coffeeshop — domov">
+        <span class="brand__cup" aria-hidden="true">☕</span>
+        <span class="brand__text">AMC<small>tvoj coffeeshop</small></span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Hlavná navigácia">
+        <a href="#o-nas">O nás</a>
+        <a href="#menu">Menu</a>
+        <a href="#galeria">Galéria</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="https://www.instagram.com/amctvojcoffeeshop" target="_blank" rel="noopener" class="nav__cta">Instagram</a>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Otvoriť menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <p class="hero__eyebrow">Spišská Nová Ves · od roku 2018</p>
+      <h1 class="hero__title">Káva trochu<br><em>inak.</em></h1>
+      <p class="hero__lead">
+        Prvý coffeeshop v Spišskej Novej Vsi. Poctivá káva, domáce dobroty
+        a miesto, kde sa cítiš ako doma — mladé, priateľské a vždy plné vône kávy.
+      </p>
+      <div class="hero__actions">
+        <a href="#menu" class="btn btn--primary">Pozri menu</a>
+        <a href="#kontakt" class="btn btn--ghost">Nájdi nás</a>
+      </div>
+      <div class="hero__badge" aria-label="Hodnotenie 4,8 z 5 na Google">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span><strong>4,8</strong> / 5 · Google recenzie</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MARQUEE ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Espresso</span><span>·</span><span>Cappuccino</span><span>·</span>
+      <span>Flat White</span><span>·</span><span>Domáce koláče</span><span>·</span>
+      <span>Matcha</span><span>·</span><span>Filter coffee</span><span>·</span>
+      <span>Chai latte</span><span>·</span>
+      <span>Espresso</span><span>·</span><span>Cappuccino</span><span>·</span>
+      <span>Flat White</span><span>·</span><span>Domáce koláče</span><span>·</span>
+      <span>Matcha</span><span>·</span><span>Filter coffee</span><span>·</span>
+      <span>Chai latte</span><span>·</span>
+    </div>
+  </div>
+
+  <!-- ===== O NÁS ===== -->
+  <section class="section about" id="o-nas">
+    <div class="container about__grid">
+      <div class="about__media">
+        <div class="about__photo about__photo--1" role="img" aria-label="Interiér kaviarne AMC"></div>
+        <div class="about__photo about__photo--2" role="img" aria-label="Šálka kávy AMC"></div>
+        <div class="about__sticker">☕ ahoj!</div>
+      </div>
+      <div class="about__text">
+        <p class="eyebrow">O nás</p>
+        <h2>Malá kaviareň s veľkým srdcom</h2>
+        <p>
+          AMC je viac než len coffeeshop — je to miesto stretnutí. Vznikli sme
+          ako <strong>prvý coffeeshop v Spišskej Novej Vsi</strong> s jednoduchou
+          myšlienkou: podávať kávu trochu inak a robiť to s láskou.
+        </p>
+        <p>
+          U nás dostaneš poctivú kávu od skvelých pražiarní, domáce koláčiky
+          a úsmev k tomu. Sme mladý, priateľský tím a tešíme sa na každého,
+          kto k nám zavíta — či už na ranné espresso, alebo na popoludňajší
+          chai s knihou.
+        </p>
+        <ul class="about__points">
+          <li><span aria-hidden="true">🌱</span> Čerstvo pražená káva</li>
+          <li><span aria-hidden="true">🍰</span> Domáce dobroty</li>
+          <li><span aria-hidden="true">💛</span> Priateľská atmosféra</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MENU ===== -->
+  <section class="section menu" id="menu">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Naše menu</p>
+        <h2>Čo u nás nájdeš</h2>
+        <p class="section__note">Ceny sú orientačné — aktuálnu ponuku nájdeš vždy u nás na bare. 💛</p>
+      </div>
+
+      <div class="menu__grid">
+        <!-- Káva -->
+        <div class="menu__card">
+          <h3 class="menu__cat">☕ Káva</h3>
+          <ul class="menu__list">
+            <li><span class="menu__name">Espresso</span><span class="menu__dots"></span><span class="menu__price">1,50 €</span></li>
+            <li><span class="menu__name">Doppio</span><span class="menu__dots"></span><span class="menu__price">2,20 €</span></li>
+            <li><span class="menu__name">Cappuccino</span><span class="menu__dots"></span><span class="menu__price">2,30 €</span></li>
+            <li><span class="menu__name">Flat White</span><span class="menu__dots"></span><span class="menu__price">2,60 €</span></li>
+            <li><span class="menu__name">Caffè Latte</span><span class="menu__dots"></span><span class="menu__price">2,70 €</span></li>
+            <li><span class="menu__name">Filter / V60</span><span class="menu__dots"></span><span class="menu__price">2,80 €</span></li>
+          </ul>
+        </div>
+
+        <!-- Nie len káva -->
+        <div class="menu__card">
+          <h3 class="menu__cat">🍵 Nie len káva</h3>
+          <ul class="menu__list">
+            <li><span class="menu__name">Matcha latte</span><span class="menu__dots"></span><span class="menu__price">3,20 €</span></li>
+            <li><span class="menu__name">Chai latte</span><span class="menu__dots"></span><span class="menu__price">3,00 €</span></li>
+            <li><span class="menu__name">Horúca čokoláda</span><span class="menu__dots"></span><span class="menu__price">2,80 €</span></li>
+            <li><span class="menu__name">Sezónna limonáda</span><span class="menu__dots"></span><span class="menu__price">3,00 €</span></li>
+            <li><span class="menu__name">Čaj (výber)</span><span class="menu__dots"></span><span class="menu__price">2,20 €</span></li>
+            <li><span class="menu__name">Ľadová káva</span><span class="menu__dots"></span><span class="menu__price">3,20 €</span></li>
+          </ul>
+        </div>
+
+        <!-- Maškrty -->
+        <div class="menu__card">
+          <h3 class="menu__cat">🍰 Maškrty</h3>
+          <ul class="menu__list">
+            <li><span class="menu__name">Domáci koláč dňa</span><span class="menu__dots"></span><span class="menu__price">2,90 €</span></li>
+            <li><span class="menu__name">Cheesecake</span><span class="menu__dots"></span><span class="menu__price">3,40 €</span></li>
+            <li><span class="menu__name">Croissant</span><span class="menu__dots"></span><span class="menu__price">1,80 €</span></li>
+            <li><span class="menu__name">Cookie</span><span class="menu__dots"></span><span class="menu__price">1,50 €</span></li>
+            <li><span class="menu__name">Banana bread</span><span class="menu__dots"></span><span class="menu__price">2,60 €</span></li>
+            <li><span class="menu__name">Raňajkový toast</span><span class="menu__dots"></span><span class="menu__price">3,90 €</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="menu__alt">
+        Máš špeciálnu požiadavku alebo alergiu? Povedz nám — radi poradíme.
+        Ponúkame aj <strong>rastlinné mlieka</strong> (ovsené, mandľové, sójové).
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== GALÉRIA ===== -->
+  <section class="section gallery" id="galeria">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Galéria</p>
+        <h2>Nakukni k nám</h2>
+        <p class="section__note">Najčerstvejšie zábery nájdeš na našom <a href="https://www.instagram.com/amctvojcoffeeshop" target="_blank" rel="noopener">Instagrame</a>.</p>
+      </div>
+
+      <div class="gallery__grid">
+        <div class="gallery__item g1" role="img" aria-label="Foto kaviarne 1"></div>
+        <div class="gallery__item g2" role="img" aria-label="Foto kaviarne 2"></div>
+        <div class="gallery__item g3" role="img" aria-label="Foto kaviarne 3"></div>
+        <div class="gallery__item g4" role="img" aria-label="Foto kaviarne 4"></div>
+        <div class="gallery__item g5" role="img" aria-label="Foto kaviarne 5"></div>
+        <div class="gallery__item g6" role="img" aria-label="Foto kaviarne 6"></div>
+      </div>
+
+      <a href="https://www.instagram.com/amctvojcoffeeshop" target="_blank" rel="noopener" class="btn btn--primary gallery__cta">
+        Sleduj nás na Instagrame
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== KONTAKT ===== -->
+  <section class="section contact" id="kontakt">
+    <div class="container contact__grid">
+      <div class="contact__info">
+        <p class="eyebrow">Nájdi nás</p>
+        <h2>Zastav sa na kávu</h2>
+
+        <ul class="contact__list">
+          <li>
+            <span class="contact__ico" aria-hidden="true">📍</span>
+            <div>
+              <strong>Adresa</strong>
+              <a href="https://maps.app.goo.gl/QRpLaR378zq7XD2i9" target="_blank" rel="noopener">
+                Ing. Straku 9003<br>052 01 Spišská Nová Ves
+              </a>
+            </div>
+          </li>
+          <li>
+            <span class="contact__ico" aria-hidden="true">🕗</span>
+            <div>
+              <strong>Otváracie hodiny</strong>
+              <span class="contact__hours">
+                Po – Pia: 7:30 – 18:00<br>
+                Sobota: 8:00 – 18:00<br>
+                Nedeľa: 9:00 – 17:00
+              </span>
+              <small class="contact__hint">* Časy si prosím over u nás — radi ich upravíme.</small>
+            </div>
+          </li>
+          <li>
+            <span class="contact__ico" aria-hidden="true">📸</span>
+            <div>
+              <strong>Instagram</strong>
+              <a href="https://www.instagram.com/amctvojcoffeeshop" target="_blank" rel="noopener">@amctvojcoffeeshop</a>
+            </div>
+          </li>
+        </ul>
+
+        <div class="contact__actions">
+          <a href="https://maps.app.goo.gl/QRpLaR378zq7XD2i9" target="_blank" rel="noopener" class="btn btn--primary">Navigovať</a>
+          <a href="https://www.instagram.com/amctvojcoffeeshop" target="_blank" rel="noopener" class="btn btn--ghost">Instagram</a>
+        </div>
+      </div>
+
+      <div class="contact__map">
+        <iframe
+          title="Mapa — AMC tvoj coffeeshop, Spišská Nová Ves"
+          src="https://www.google.com/maps?q=AMC+tvoj+coffeeshop,+Ing.+Straku+9003,+Spi%C5%A1sk%C3%A1+Nov%C3%A1+Ves&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__cup" aria-hidden="true">☕</span>
+        <span class="brand__text">AMC<small>tvoj coffeeshop</small></span>
+      </div>
+      <nav class="footer__links" aria-label="Pätička">
+        <a href="#o-nas">O nás</a>
+        <a href="#menu">Menu</a>
+        <a href="#galeria">Galéria</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="https://www.instagram.com/amctvojcoffeeshop" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+      <p class="footer__copy">© <span id="year">2026</span> AMC tvoj coffeeshop · Spišská Nová Ves · S láskou ku káve ☕</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
