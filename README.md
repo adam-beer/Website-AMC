@@ -8,8 +8,10 @@ a nepotrebuje žiadny server ani databázu — sú to len tri súbory.
 | Súbor | Čo obsahuje |
 |-------|-------------|
 | `index.html` | Obsah stránky (texty, menu, kontakt) |
-| `styles.css` | Vzhľad a farby |
+| `styles.css` | Vzhľad a farby (luxusná tmavá téma) |
 | `script.js`  | Mobilné menu + animácie |
+| `amc-logo.jpg` | Logo AMC (vľavo hore, v pätičke, ikona záložky) |
+| `coffee-beans.svg` | Jemná textúra kávových zŕn v pozadí |
 
 ## Ako si stránku pozrieť
 Stačí otvoriť `index.html` v prehliadači (dvojklik). To je všetko.
@@ -20,9 +22,10 @@ Všetko sa edituje priamo v `index.html`:
 1. **Otváracie hodiny** — sekcia „Kontakt“. Aktuálne sú tam orientačné časy
    (Po–Pia 7:30–18:00 atď.). Nahraď ich reálnymi.
 2. **Menu a ceny** — sekcia „Menu“. Položky a ceny sú ukážkové, len ich prepíš.
-3. **Fotky** — Galéria aj „O nás“ teraz používajú farebné dlaždice. Keď budeš
-   mať fotky, daj vedieť — vymeníme ich za reálne obrázky (alebo ich vlož sám,
-   návod nižšie).
+3. **Fotky produktov** — Galéria aj „O nás“ teraz používajú farebné dlaždice.
+   Nahraj do repozitára fotky výrobkov (a obrázok 4 termopohárov — čierna, biela,
+   krémová, rose gold) a daj vedieť — zaradím ich do galérie a pridám sekciu
+   s termopohármi. Návod na vloženie fotky je nižšie.
 4. **Rok založenia** — v hero sekcii je „od roku 2018“. Uprav podľa skutočnosti.
 
 ### Ako pridať vlastnú fotku

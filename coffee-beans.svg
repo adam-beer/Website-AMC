@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+  <!-- Subtle scattered coffee beans — used as a low-opacity luxury texture -->
+  <g fill="#7a4a2e" fill-opacity="0.55" stroke="none">
+    <!-- each bean = ellipse + seam curve -->
+    <g transform="translate(40,34) rotate(28)">
+      <ellipse rx="14" ry="9"/>
+      <path d="M-12 1 C -5 -4, 5 4, 12 -1" fill="none" stroke="#1a0f08" stroke-opacity="0.6" stroke-width="1.6" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(132,58) rotate(-42) scale(1.08)">
+      <ellipse rx="14" ry="9"/>
+      <path d="M-12 1 C -5 -4, 5 4, 12 -1" fill="none" stroke="#1a0f08" stroke-opacity="0.6" stroke-width="1.6" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(200,118) rotate(64) scale(0.92)">
+      <ellipse rx="14" ry="9"/>
+      <path d="M-12 1 C -5 -4, 5 4, 12 -1" fill="none" stroke="#1a0f08" stroke-opacity="0.6" stroke-width="1.6" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(70,120) rotate(-12)">
+      <ellipse rx="14" ry="9"/>
+      <path d="M-12 1 C -5 -4, 5 4, 12 -1" fill="none" stroke="#1a0f08" stroke-opacity="0.6" stroke-width="1.6" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(168,186) rotate(18) scale(1.04)">
+      <ellipse rx="14" ry="9"/>
+      <path d="M-12 1 C -5 -4, 5 4, 12 -1" fill="none" stroke="#1a0f08" stroke-opacity="0.6" stroke-width="1.6" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(104,168) rotate(58) scale(0.96)">
+      <ellipse rx="14" ry="9"/>
+      <path d="M-12 1 C -5 -4, 5 4, 12 -1" fill="none" stroke="#1a0f08" stroke-opacity="0.6" stroke-width="1.6" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(22,196) rotate(-58)">
+      <ellipse rx="14" ry="9"/>
+      <path d="M-12 1 C -5 -4, 5 4, 12 -1" fill="none" stroke="#1a0f08" stroke-opacity="0.6" stroke-width="1.6" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(214,30) rotate(40) scale(0.88)">
+      <ellipse rx="14" ry="9"/>
+      <path d="M-12 1 C -5 -4, 5 4, 12 -1" fill="none" stroke="#1a0f08" stroke-opacity="0.6" stroke-width="1.6" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(126,108) rotate(-78) scale(0.82)">
+      <ellipse rx="14" ry="9"/>
+      <path d="M-12 1 C -5 -4, 5 4, 12 -1" fill="none" stroke="#1a0f08" stroke-opacity="0.6" stroke-width="1.6" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>
