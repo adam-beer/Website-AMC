@@ -238,14 +238,53 @@ em { font-style: italic; }
 .gallery { position: relative; background: linear-gradient(180deg, var(--cocoa-3), var(--cocoa-2)); overflow: hidden; }
 .gallery::before { content: ""; position: absolute; inset: 0; background-image: var(--beans); background-size: 320px 320px; opacity: .26; pointer-events: none; }
 .gallery .container { position: relative; z-index: 1; }
-.gallery__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-.gallery__item { border-radius: var(--radius); position: relative; overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .4s var(--ease); background: #1a120c; aspect-ratio: 3 / 4; }
-.gallery__item img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
-.gallery__item::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(0,0,0,.28)); opacity: 0; transition: opacity .4s var(--ease); }
-.gallery__item:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
-.gallery__item:hover img { transform: scale(1.06); }
-.gallery__item:hover::after { opacity: 1; }
-.gallery__cta { display: flex; width: max-content; margin: clamp(28px,4vw,42px) auto 0; }
+/* ---- Coverflow carousel ---- */
+.carousel { position: relative; max-width: 760px; margin: 0 auto; }
+.carousel__viewport {
+  position: relative; overflow: hidden; padding: 30px 0 10px;
+  perspective: 1300px; touch-action: pan-y; cursor: grab;
+}
+.carousel__viewport.is-grabbing { cursor: grabbing; }
+.carousel__track {
+  display: flex; align-items: center; justify-content: flex-start;
+  gap: clamp(16px, 3vw, 30px); transform-style: preserve-3d; will-change: transform;
+}
+.carousel__card {
+  position: relative; flex: 0 0 auto; width: clamp(230px, 60vw, 320px); aspect-ratio: 3 / 4;
+  margin: 0; border-radius: 22px; overflow: hidden; background: #1a120c;
+  box-shadow: 0 30px 60px -28px rgba(0,0,0,.85); border: 1px solid rgba(200,168,106,.28);
+  will-change: transform, opacity; backface-visibility: hidden;
+}
+.carousel__card img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; user-select: none; -webkit-user-drag: none; }
+.carousel__card.is-active { box-shadow: 0 40px 80px -26px rgba(0,0,0,.9), 0 0 0 1.5px var(--gold); }
+.carousel__caption {
+  position: absolute; left: 12px; bottom: 12px; z-index: 2;
+  background: rgba(13,9,7,.72); color: var(--cream); font-size: .82rem; font-weight: 500;
+  padding: .42rem .8rem; border-radius: 999px; backdrop-filter: blur(8px);
+  border: 1px solid rgba(200,168,106,.3);
+  opacity: 0; transform: translateY(8px); transition: opacity .4s var(--ease) .1s, transform .4s var(--ease) .1s;
+}
+.carousel__card.is-active .carousel__caption { opacity: 1; transform: none; }
+
+.carousel__arrow {
+  position: absolute; top: 46%; z-index: 20; transform: translateY(-50%);
+  width: 50px; height: 50px; border-radius: 50%; border: 0; cursor: pointer;
+  background: var(--red); color: var(--white); display: grid; place-items: center;
+  box-shadow: 0 12px 26px -12px rgba(214,43,39,.8); transition: background .25s, transform .25s;
+}
+.carousel__arrow:hover { background: var(--red-d); transform: translateY(-50%) scale(1.08); }
+.carousel__arrow:active { transform: translateY(-50%) scale(.96); }
+.carousel__arrow--prev { left: 4px; }
+.carousel__arrow--next { right: 4px; }
+.carousel__arrow svg { display: block; }
+
+.carousel__dots { display: flex; justify-content: center; gap: .5rem; margin-top: 1.4rem; }
+.carousel__dot { width: 9px; height: 9px; padding: 0; border: 0; border-radius: 999px; cursor: pointer; background: rgba(245,239,230,.3); transition: width .3s var(--ease), background .3s; }
+.carousel__dot.is-active { width: 26px; background: var(--red); }
+
+.carousel__hint { text-align: center; color: var(--cream-faint); font-size: .85rem; margin-top: .9rem; }
+
+.gallery__cta { display: flex; width: max-content; margin: clamp(24px,4vw,36px) auto 0; }
 
 /* ===========================================================
    CONTACT — dark, textured

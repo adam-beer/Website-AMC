@@ -218,11 +218,38 @@
         <p class="section__note">Najčerstvejšie zábery nájdeš na našom <a href="https://www.instagram.com/amctvojcoffeeshop" target="_blank" rel="noopener">Instagrame</a>.</p>
       </div>
 
-      <div class="gallery__grid">
-        <div class="gallery__item"><img src="IMG_5912.jpeg" alt="Croissant, espresso a pomarančový nápoj na terase" loading="lazy" /></div>
-        <div class="gallery__item"><img src="IMG_5913.jpeg" alt="Ľadová káva v pohári so šľahačkou a kakaom" loading="lazy" /></div>
-        <div class="gallery__item"><img src="IMG_5915.jpeg" alt="Sezónny korenistý nápoj so škoricou a citrónom" loading="lazy" /></div>
-        <div class="gallery__item"><img src="termopohare.png" alt="Termopoháre AMC v štyroch farbách — čierna, rose gold, krémová a biela" loading="lazy" /></div>
+      <div class="carousel" id="galleryCarousel">
+        <button class="carousel__arrow carousel__arrow--prev" type="button" aria-label="Predchádzajúca fotka">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <div class="carousel__viewport">
+          <div class="carousel__track">
+            <figure class="carousel__card">
+              <img src="IMG_5912.jpeg" alt="Croissant, espresso a pomarančový nápoj na terase" loading="lazy" draggable="false" />
+              <figcaption class="carousel__caption">☀️ Raňajky na terase</figcaption>
+            </figure>
+            <figure class="carousel__card">
+              <img src="IMG_5913.jpeg" alt="Ľadová káva v pohári so šľahačkou a kakaom" loading="lazy" draggable="false" />
+              <figcaption class="carousel__caption">🧊 Ľadová káva</figcaption>
+            </figure>
+            <figure class="carousel__card">
+              <img src="IMG_5915.jpeg" alt="Sezónny korenistý nápoj so škoricou a citrónom" loading="lazy" draggable="false" />
+              <figcaption class="carousel__caption">🍂 Sezónny chai</figcaption>
+            </figure>
+            <figure class="carousel__card">
+              <img src="termopohare.png" alt="Termopoháre AMC v štyroch farbách — čierna, rose gold, krémová a biela" loading="lazy" draggable="false" />
+              <figcaption class="carousel__caption">🥤 Termopoháre AMC</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <button class="carousel__arrow carousel__arrow--next" type="button" aria-label="Ďalšia fotka">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <div class="carousel__dots" role="tablist" aria-label="Fotky galérie"></div>
+        <p class="carousel__hint">Potiahni prstom alebo klikni na šípky 👉</p>
       </div>
 
       <a href="https://www.instagram.com/amctvojcoffeeshop" target="_blank" rel="noopener" class="btn btn--primary gallery__cta">
