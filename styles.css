@@ -110,6 +110,10 @@ em { font-style: italic; }
 .nav__links a:not(.nav__cta):hover::after { width: 100%; }
 .nav__cta { background: var(--red); color: var(--white) !important; padding: .55rem 1.2rem !important; border-radius: 999px; transition: background .25s, transform .25s; }
 .nav__cta:hover { background: var(--red-d); transform: translateY(-2px); }
+/* Instagram icon button */
+.nav__ig { display: inline-flex; align-items: center; justify-content: center; padding: .5rem !important; width: 42px; height: 42px; border-radius: 50%; }
+.nav__ig svg { display: block; }
+.nav__ig::after { display: none !important; }
 
 .nav__toggle { display: none; flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: 8px; }
 .nav__toggle span { width: 26px; height: 2.5px; background: var(--cream); border-radius: 2px; transition: transform .3s var(--ease), opacity .2s; }
@@ -297,6 +301,7 @@ em { font-style: italic; }
   .nav__links a { padding: .95rem .2rem; border-bottom: 1px solid rgba(200,168,106,.12); }
   .nav__links a::after { display: none; }
   .nav__cta { text-align: center; margin-top: .8rem; border-bottom: 0 !important; }
+  .nav__ig { margin-inline: auto; }
 
   .about__grid { grid-template-columns: 1fr; }
   .about__media { min-height: 340px; max-width: 430px; margin-inline: auto; }
