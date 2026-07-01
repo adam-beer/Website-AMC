@@ -159,8 +159,12 @@ em { font-style: italic; }
   display: inline-flex; align-items: center; gap: .6rem; margin-top: 1.8rem; font-size: .95rem;
   color: var(--cream-dim); background: rgba(255,255,255,.06); border: 1px solid rgba(200,168,106,.28);
   padding: .6rem 1.1rem; border-radius: 999px; backdrop-filter: blur(6px);
+  transition: background .25s, border-color .25s, transform .25s;
 }
+.hero__badge:hover { background: rgba(255,255,255,.1); border-color: rgba(200,168,106,.55); transform: translateY(-2px); }
 .hero__badge strong { color: var(--white); }
+.hero__badge-arrow { color: var(--gold-soft); font-size: .85rem; transition: transform .25s var(--ease); }
+.hero__badge:hover .hero__badge-arrow { transform: translate(2px, -2px); }
 .stars { color: var(--gold); letter-spacing: .08em; }
 
 /* hero coffee photo */
