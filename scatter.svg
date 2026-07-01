@@ -2,15 +2,15 @@
   <!-- Soft scattered coffee beans + tea leaves for the light sage theme -->
   <defs>
     <g id="bean">
-      <ellipse rx="12" ry="7.5" fill="#9c7a55" fill-opacity="0.55"/>
-      <path d="M-9 1 C -4 -3, 4 3, 9 -1" fill="none" stroke="#6f4e30" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
+      <ellipse rx="12" ry="7.5" fill="#9c7a55" fill-opacity="0.4"/>
+      <path d="M-9 1 C -4 -3, 4 3, 9 -1" fill="none" stroke="#6f4e30" stroke-opacity="0.4" stroke-width="1.5" stroke-linecap="round"/>
     </g>
     <g id="leaf">
-      <path d="M0 0 C 8 -11, 22 -11, 30 0 C 22 11, 8 11, 0 0 Z" fill="#a6c07d" fill-opacity="0.55"/>
-      <path d="M3 0 L 27 0" stroke="#7f9d54" stroke-opacity="0.5" stroke-width="1.4" stroke-linecap="round"/>
+      <path d="M0 0 C 8 -11, 22 -11, 30 0 C 22 11, 8 11, 0 0 Z" fill="#a6c07d" fill-opacity="0.4"/>
+      <path d="M3 0 L 27 0" stroke="#7f9d54" stroke-opacity="0.4" stroke-width="1.4" stroke-linecap="round"/>
     </g>
     <g id="spark">
-      <path d="M0 -6 L 1.4 -1.4 L 6 0 L 1.4 1.4 L 0 6 L -1.4 1.4 L -6 0 L -1.4 -1.4 Z" fill="#c9b06a" fill-opacity="0.5"/>
+      <path d="M0 -6 L 1.4 -1.4 L 6 0 L 1.4 1.4 L 0 6 L -1.4 1.4 L -6 0 L -1.4 -1.4 Z" fill="#c9b06a" fill-opacity="0.34"/>
     </g>
   </defs>
 
