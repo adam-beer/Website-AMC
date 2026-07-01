@@ -111,8 +111,8 @@ em { font-style: italic; }
 .nav__cta { background: var(--red); color: var(--white) !important; padding: .55rem 1.2rem !important; border-radius: 999px; transition: background .25s, transform .25s; }
 .nav__cta:hover { background: var(--red-d); transform: translateY(-2px); }
 /* Instagram icon button */
-.nav__ig { display: inline-flex; align-items: center; justify-content: center; padding: .5rem !important; width: 42px; height: 42px; border-radius: 50%; }
-.nav__ig svg { display: block; }
+.nav__ig { display: inline-flex; align-items: center; justify-content: center; padding: 0 !important; width: 42px; height: 42px; border-radius: 50%; line-height: 0; }
+.nav__ig svg { display: block; transform: translate(-0.5px, 0.5px); } /* optical centering for the top-right dot */
 .nav__ig::after { display: none !important; }
 
 .nav__toggle { display: none; flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: 8px; }
