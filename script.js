@@ -198,4 +198,44 @@
     render(false);
     startAuto();
   }
+
+  /* ===========================================================
+     Interactive menu — swap the card image + caption on hover
+     =========================================================== */
+  var menuCards = document.querySelectorAll(".menu__card");
+  var preloaded = {};
+  menuCards.forEach(function (card) {
+    var img = card.querySelector(".menu__img");
+    var stage = card.querySelector(".menu__stage");
+    var cap = card.querySelector(".menu__cap");
+    if (!img || !stage) return;
+
+    var defImg = img.getAttribute("data-default");
+    var defCap = cap ? cap.getAttribute("data-default") : "";
+    var items = card.querySelectorAll(".menu__list li");
+
+    function swap(src, caption) {
+      if (src && img.getAttribute("src") !== src) {
+        if (!preloaded[src]) { preloaded[src] = new Image(); preloaded[src].src = src; }
+        img.setAttribute("src", src);
+        stage.classList.remove("is-pop");
+        void stage.offsetWidth;      // reflow to restart the pop animation
+        stage.classList.add("is-pop");
+      }
+      if (cap) cap.textContent = caption || defCap;
+    }
+
+    items.forEach(function (li) {
+      var src = li.getAttribute("data-img");
+      if (src && !preloaded[src]) { preloaded[src] = new Image(); preloaded[src].src = src; }
+      var enter = function () { swap(src, li.getAttribute("data-cap")); };
+      li.addEventListener("mouseenter", enter);
+      li.addEventListener("focusin", enter);
+      li.setAttribute("tabindex", "0");
+    });
+
+    card.addEventListener("mouseleave", function () {
+      swap(defImg, defCap);
+    });
+  });
 })();
