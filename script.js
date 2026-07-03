@@ -34,7 +34,7 @@
 
   /* ---- Reveal on scroll ---- */
   var revealTargets = document.querySelectorAll(
-    ".section__head, .about__text, .about__media, .menu__card, .gallery__item, .contact__info, .contact__map, .menu__alt"
+    ".section__head, .about__text, .about__media, .menu__card, .gallery__item, .contact__info, .contact__map, .menu__alt, .carousel, .termo__panel"
   );
   revealTargets.forEach(function (el) { el.classList.add("reveal"); });
 
@@ -238,4 +238,99 @@
       swap(defImg, defCap);
     });
   });
+
+  /* ===========================================================
+     Cinematic layer
+     =========================================================== */
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var isDesktop = window.matchMedia("(min-width: 900px)");
+
+  /* ---- Scroll progress bar + hide-on-scroll nav ---- */
+  var navEl = document.querySelector(".nav");
+  var progress = document.getElementById("navProgress");
+  var lastY = window.pageYOffset;
+  var ticking = false;
+
+  function onScrollFrame() {
+    var y = window.pageYOffset;
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (progress && max > 0) progress.style.width = Math.min(100, (y / max) * 100) + "%";
+
+    if (navEl) {
+      var menuOpen = links && links.classList.contains("open");
+      if (!menuOpen) {
+        if (y > lastY + 4 && y > 220) navEl.classList.add("nav--hidden");
+        else if (y < lastY - 4 || y <= 220) navEl.classList.remove("nav--hidden");
+      }
+    }
+    lastY = y;
+
+    /* ---- hero scroll-zoom (desktop, no reduced motion) ---- */
+    if (!reduceMotion && isDesktop.matches) {
+      var heroImgEl = document.getElementById("heroImg");
+      var heroContent = document.querySelector(".hero__content");
+      var hero = document.querySelector(".hero");
+      if (heroImgEl && hero) {
+        var h = hero.offsetHeight || 1;
+        var p = Math.min(1, Math.max(0, y / h));
+        heroImgEl.style.transform = "scale(" + (1 + p * 0.28) + ") translateY(" + (p * 26) + "px)";
+        if (heroContent) {
+          heroContent.style.opacity = String(1 - p * 0.85);
+          heroContent.style.transform = "translateY(" + (p * -34) + "px)";
+        }
+      }
+    }
+    ticking = false;
+  }
+  window.addEventListener("scroll", function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(onScrollFrame); }
+  }, { passive: true });
+  onScrollFrame();
+
+  /* ---- editorial mask reveals + ghost words ---- */
+  if ("IntersectionObserver" in window) {
+    var maskIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add("is-open"); maskIO.unobserve(en.target); }
+      });
+    }, { threshold: 0.25 });
+    document.querySelectorAll(".mask-reveal").forEach(function (el) {
+      if (reduceMotion) el.classList.add("is-open");
+      else maskIO.observe(el);
+    });
+
+    var ghostIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add("in-view"); ghostIO.unobserve(en.target); }
+      });
+    }, { threshold: 0.4 });
+    document.querySelectorAll(".section__head, .about__text").forEach(function (el) {
+      if (el.querySelector(".ghost")) {
+        if (reduceMotion) el.classList.add("in-view");
+        else ghostIO.observe(el);
+      }
+    });
+  } else {
+    document.querySelectorAll(".mask-reveal").forEach(function (el) { el.classList.add("is-open"); });
+    document.querySelectorAll(".section__head, .about__text").forEach(function (el) { el.classList.add("in-view"); });
+  }
+
+  /* ---- Termopoháre colour swatches ---- */
+  var termoImg = document.getElementById("termoImg");
+  var termoLabel = document.getElementById("termoLabel");
+  var swatches = document.querySelectorAll(".termo__swatch");
+  if (termoImg && swatches.length) {
+    swatches.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        swatches.forEach(function (b) { b.classList.remove("is-active"); });
+        btn.classList.add("is-active");
+        var pos = btn.getAttribute("data-pos") || "50% 50%";
+        var zoom = parseFloat(btn.getAttribute("data-zoom") || "1");
+        termoImg.style.objectPosition = pos;
+        termoImg.style.transform = "scale(" + zoom + ")";
+        termoImg.style.transformOrigin = pos;
+        if (termoLabel) termoLabel.textContent = btn.getAttribute("data-name") || "";
+      });
+    });
+  }
 })();

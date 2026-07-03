@@ -20,7 +20,7 @@
   <!-- Favicon: the AMC logo -->
   <link rel="icon" href="amc-logo.jpg" />
 
-  <link rel="stylesheet" href="styles.css?v=9" />
+  <link rel="stylesheet" href="styles.css?v=10" />
 </head>
 <body>
 
@@ -49,6 +49,7 @@
         <span></span><span></span><span></span>
       </button>
     </div>
+    <span class="nav__progress" id="navProgress" aria-hidden="true"></span>
   </header>
 
   <!-- ===== HERO ===== -->
@@ -93,8 +94,8 @@
       </div>
 
       <div class="hero__media">
-        <div class="hero__photo">
-          <img src="IMG_5916.jpeg" alt="Espresso s kávovými zrnami v rannom slnku" width="640" height="800" fetchpriority="high" />
+        <div class="hero__photo" id="heroPhoto">
+          <img src="IMG_5916.jpeg" alt="Espresso s kávovými zrnami v rannom slnku" width="640" height="800" fetchpriority="high" id="heroImg" />
           <span class="hero__photo-chip">☕ čerstvo pripravené</span>
         </div>
         <span class="hero__bean hero__bean--a" aria-hidden="true"></span>
@@ -121,15 +122,16 @@
   <section class="section about" id="o-nas">
     <div class="container about__grid">
       <div class="about__media">
-        <div class="about__photo about__photo--1">
+        <div class="about__photo about__photo--1 mask-reveal">
           <img src="IMG_5910.jpeg" alt="Matcha latte a cappuccino s latte artom na podnose" loading="lazy" />
         </div>
-        <div class="about__photo about__photo--2">
+        <div class="about__photo about__photo--2 mask-reveal mask-reveal--right">
           <img src="IMG_5914.jpeg" alt="Croissanty s vanilkovým krémom a cappuccino" loading="lazy" />
         </div>
         <div class="about__sticker">☕ ahoj!</div>
       </div>
       <div class="about__text">
+        <span class="ghost" aria-hidden="true">O nás</span>
         <p class="eyebrow">O nás</p>
         <h2>Malá kaviareň s veľkým srdcom</h2>
         <p>
@@ -156,6 +158,7 @@
   <section class="section menu" id="menu">
     <div class="container">
       <div class="section__head">
+        <span class="ghost" aria-hidden="true">Menu</span>
         <p class="eyebrow">Naše menu</p>
         <h2>Čo u nás nájdeš</h2>
         <p class="section__note">Ceny sú orientačné — aktuálnu ponuku nájdeš vždy u nás na bare. 💛</p>
@@ -164,7 +167,7 @@
       <div class="menu__grid">
         <!-- Káva -->
         <div class="menu__card menu__card--red">
-          <div class="menu__stage">
+          <div class="menu__stage mask-reveal">
             <img class="menu__img" src="IMG_5916.jpeg" alt="" loading="lazy" data-default="IMG_5916.jpeg" />
             <span class="menu__cap" data-default="Káva">Káva</span>
           </div>
@@ -181,7 +184,7 @@
 
         <!-- Nie len káva -->
         <div class="menu__card menu__card--green">
-          <div class="menu__stage">
+          <div class="menu__stage mask-reveal">
             <img class="menu__img" src="IMG_5910.jpeg" alt="" loading="lazy" data-default="IMG_5910.jpeg" />
             <span class="menu__cap" data-default="Nie len káva">Nie len káva</span>
           </div>
@@ -198,7 +201,7 @@
 
         <!-- Maškrty -->
         <div class="menu__card menu__card--gold">
-          <div class="menu__stage">
+          <div class="menu__stage mask-reveal">
             <img class="menu__img" src="IMG_5914.jpeg" alt="" loading="lazy" data-default="IMG_5914.jpeg" />
             <span class="menu__cap" data-default="Maškrty">Maškrty</span>
           </div>
@@ -225,6 +228,7 @@
   <section class="section gallery" id="galeria">
     <div class="container">
       <div class="section__head">
+        <span class="ghost" aria-hidden="true">Galéria</span>
         <p class="eyebrow">Galéria</p>
         <h2>Nakukni k nám</h2>
         <p class="section__note">Najčerstvejšie zábery nájdeš na našom <a href="https://www.instagram.com/amctvojcoffeeshop" target="_blank" rel="noopener">Instagrame</a>.</p>
@@ -249,10 +253,6 @@
               <img src="IMG_5915.jpeg" alt="Sezónny korenistý nápoj so škoricou a citrónom" loading="lazy" draggable="false" />
               <figcaption class="carousel__caption">🍂 Sezónny chai</figcaption>
             </figure>
-            <figure class="carousel__card">
-              <img src="termopohare.png" alt="Termopoháre AMC v štyroch farbách — čierna, rose gold, krémová a biela" loading="lazy" draggable="false" />
-              <figcaption class="carousel__caption">🥤 Termopoháre AMC</figcaption>
-            </figure>
           </div>
         </div>
 
@@ -267,6 +267,51 @@
       <a href="https://www.instagram.com/amctvojcoffeeshop" target="_blank" rel="noopener" class="btn btn--primary gallery__cta">
         Sleduj nás na Instagrame
       </a>
+    </div>
+  </section>
+
+  <!-- ===== TERMOPOHÁRE ===== -->
+  <section class="section termo" id="termopohare">
+    <div class="container">
+      <div class="section__head">
+        <span class="ghost" aria-hidden="true">Merch</span>
+        <p class="eyebrow">AMC merch</p>
+        <h2>Termopoháre AMC</h2>
+        <p class="section__note">Tvoja káva na cesty — vyber si svoju farbu. 🥤</p>
+      </div>
+
+      <div class="termo__grid">
+        <div class="termo__photo mask-reveal">
+          <img src="termopohare.png" alt="Termopoháre AMC v štyroch farbách — čierna, rose gold, krémová a biela" loading="lazy" id="termoImg" />
+          <span class="termo__label" id="termoLabel">Všetky štyri farby</span>
+        </div>
+
+        <div class="termo__panel">
+          <h3>Káva, ktorá ide s tebou</h3>
+          <p>
+            Termopohár s logom AMC udrží tvoju kávu horúcu a štýl na úrovni.
+            Štyri farby — vyber si tú svoju priamo u nás na bare.
+          </p>
+          <div class="termo__swatches" role="group" aria-label="Farby termopohárov">
+            <button class="termo__swatch is-active" type="button" data-pos="50% 50%" data-zoom="1" data-name="Všetky štyri farby">
+              <span class="termo__dot termo__dot--all" aria-hidden="true"></span> Všetky
+            </button>
+            <button class="termo__swatch" type="button" data-pos="6% 42%" data-zoom="2.1" data-name="Čierna — klasika s eleganciou">
+              <span class="termo__dot" style="background:#1e1c1a" aria-hidden="true"></span> Čierna
+            </button>
+            <button class="termo__swatch" type="button" data-pos="36% 52%" data-zoom="2.1" data-name="Rose gold — jemná a hravá">
+              <span class="termo__dot" style="background:#e6c0b2" aria-hidden="true"></span> Rose gold
+            </button>
+            <button class="termo__swatch" type="button" data-pos="64% 45%" data-zoom="2.1" data-name="Krémová — teplá a útulná">
+              <span class="termo__dot" style="background:#e9dcc4" aria-hidden="true"></span> Krémová
+            </button>
+            <button class="termo__swatch" type="button" data-pos="94% 50%" data-zoom="2.1" data-name="Biela — čistá a nadčasová">
+              <span class="termo__dot" style="background:#f7f6f2;box-shadow:inset 0 0 0 1.5px rgba(58,42,30,.25)" aria-hidden="true"></span> Biela
+            </button>
+          </div>
+          <p class="termo__hint">Klikni na farbu a pozri si ju zblízka 👀</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -342,6 +387,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=9"></script>
+  <script src="script.js?v=10"></script>
 </body>
 </html>
