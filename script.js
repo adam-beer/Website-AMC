@@ -57,6 +57,15 @@
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 
+  /* ---- Logo click scrolls back to the very top ---- */
+  var brand = document.querySelector(".brand");
+  if (brand) {
+    brand.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
   /* ===========================================================
      Coverflow gallery carousel — swipe / drag / arrows / dots
      =========================================================== */

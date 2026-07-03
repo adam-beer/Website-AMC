@@ -100,10 +100,11 @@ em { font-style: italic; }
    =========================================================== */
 .nav {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(31,19,12,.92);
-  backdrop-filter: saturate(160%) blur(12px);
-  -webkit-backdrop-filter: saturate(160%) blur(12px);
-  border-bottom: 1px solid rgba(209,162,63,.18);
+  background: rgba(255,253,248,.88);
+  backdrop-filter: saturate(160%) blur(14px);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+  border-bottom: 1px solid rgba(58,42,30,.1);
+  box-shadow: 0 10px 30px -22px rgba(58,42,30,.35);
   transition: transform .45s var(--ease);
 }
 .nav--hidden { transform: translateY(-100%); }
@@ -122,12 +123,12 @@ em { font-style: italic; }
 .brand__logo:hover { transform: scale(1.06) rotate(-3deg); }
 
 .nav__links { display: flex; align-items: center; gap: 1.8rem; }
-.nav__links a { font-weight: 600; font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; color: var(--cream); position: relative; padding: .2rem 0; }
+.nav__links a { font-weight: 600; font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); position: relative; padding: .2rem 0; }
 .nav__links a:not(.nav__cta)::after {
   content: ""; position: absolute; left: 0; bottom: -3px; height: 2px; width: 0;
-  background: var(--gold); transition: width .3s var(--ease);
+  background: var(--red); transition: width .3s var(--ease);
 }
-.nav__links a:not(.nav__cta):hover { color: var(--gold); }
+.nav__links a:not(.nav__cta):hover { color: var(--red-d); }
 .nav__links a:not(.nav__cta):hover::after { width: 100%; }
 .nav__cta { background: var(--red); color: var(--white) !important; border-radius: 999px; transition: background .25s, transform .25s; }
 .nav__cta:hover { background: var(--red-d); transform: translateY(-2px); }
@@ -136,7 +137,7 @@ em { font-style: italic; }
 .nav__ig::after { display: none !important; }
 
 .nav__toggle { display: none; flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: 8px; }
-.nav__toggle span { width: 26px; height: 2.5px; background: var(--cream); border-radius: 2px; transition: transform .3s var(--ease), opacity .2s; }
+.nav__toggle span { width: 26px; height: 2.5px; background: var(--ink); border-radius: 2px; transition: transform .3s var(--ease), opacity .2s; }
 .nav__toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
 .nav__toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .nav__toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
@@ -328,13 +329,13 @@ em { font-style: italic; }
 /* ===========================================================
    FOOTER — dark brown band
    =========================================================== */
-.footer { position: relative; background: var(--brown-2); color: var(--cream); padding: 54px 0 40px; }
+.footer { position: relative; background: var(--white); border-top: 1px solid rgba(58,42,30,.1); color: var(--ink); padding: 54px 0 40px; }
 .footer__inner { display: flex; flex-direction: column; align-items: center; gap: 1.3rem; text-align: center; }
-.footer__logo { width: 76px; height: 76px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1.5px rgba(209,162,63,.5), 0 12px 30px -12px rgba(0,0,0,.9); }
+.footer__logo { width: 76px; height: 76px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1.5px rgba(209,162,63,.5), 0 12px 30px -14px rgba(58,42,30,.5); }
 .footer__links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.3rem; }
-.footer__links a { color: rgba(250,245,234,.8); font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; }
-.footer__links a:hover { color: var(--gold); }
-.footer__copy { color: rgba(250,245,234,.5); font-size: .85rem; }
+.footer__links a { color: var(--ink-soft); font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; }
+.footer__links a:hover { color: var(--red-d); }
+.footer__copy { color: var(--muted); font-size: .85rem; }
 
 /* ===========================================================
    TERMOPOHÁRE — colour swatch showcase
@@ -409,13 +410,13 @@ em { font-style: italic; }
   .nav__links {
     position: fixed; inset: 74px 0 auto 0;
     flex-direction: column; align-items: stretch; gap: 0;
-    background: rgba(31,19,12,.98); padding: 1rem 22px 1.6rem;
-    border-bottom: 1px solid rgba(209,162,63,.2);
+    background: rgba(255,253,248,.98); padding: 1rem 22px 1.6rem;
+    border-bottom: 1px solid rgba(58,42,30,.12);
     transform: translateY(-135%); transition: transform .35s var(--ease);
     box-shadow: var(--shadow); max-height: calc(100vh - 74px); overflow-y: auto;
   }
   .nav__links.open { transform: translateY(0); }
-  .nav__links a { padding: .95rem .2rem; border-bottom: 1px solid rgba(209,162,63,.14); }
+  .nav__links a { padding: .95rem .2rem; border-bottom: 1px solid rgba(58,42,30,.1); }
   .nav__links a::after { display: none; }
   .nav__cta { text-align: center; margin-top: .8rem; border-bottom: 0 !important; padding: .6rem 1.1rem !important; }
   .nav__ig { margin-inline: auto; }
